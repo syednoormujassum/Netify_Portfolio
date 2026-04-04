@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Noor Mujassum - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#0099ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#6a11cb;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Neural network nodes -->
+                    <circle cx="25" cy="10" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="15" cy="25" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="35" cy="25" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="25" cy="40" r="3" fill="url(#aiGradient)"/>
+                    <!-- Connecting lines (neural network) -->
+                    <line x1="25" y1="13" x2="15" y2="23" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="25" y1="13" x2="35" y2="23" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="15" y1="28" x2="25" y2="37" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="35" y1="28" x2="25" y2="37" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <!-- Data points -->
+                    <circle cx="10" cy="40" r="1.5" fill="#00d4ff" opacity="0.6"/>
+                    <circle cx="40" cy="40" r="1.5" fill="#00d4ff" opacity="0.6"/>
+                    <circle cx="20" cy="45" r="1" fill="#0099ff" opacity="0.5"/>
+                    <circle cx="30" cy="45" r="1" fill="#0099ff" opacity="0.5"/>
+                </svg>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="projects.html" class="nav-link">Project Details</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Syed Noor Mujassum</h1>
+            <p class="hero-subtitle">AI Fullstack Developer | AI Data Engineer</p>
+            <p class="hero-description">Building intelligent systems that transform data into actionable insights</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+        <div class="hero-image">
+            <div class="avatar"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Full Stack Developer and Data Science enthusiast with deep expertise in AI, machine learning, and modern web technologies. My work spans from building intelligent RAG pipelines and LLM applications to designing scalable backend systems and creating intuitive user interfaces.
+                    </p>
+                    <p>
+                        With hands-on experience in Python, FastAPI, LangChain, and vector databases, I create end-to-end solutions that bridge the gap between AI and user-friendly applications. I'm committed to continuous learning and staying at the forefront of emerging technologies in AI and full-stack development.
+                    </p>
+                    <p>
+                        My expertise spans across:
+                        <strong>AI & LLMs</strong> - Building RAG pipelines, prompt engineering, LangChain orchestration | 
+                        <strong>Backend Development</strong> - FastAPI, Flask, RESTful APIs, database design |
+                        <strong>Data Science</strong> - Machine learning, NLP, data analysis, and visualization |
+                        <strong>Frontend</strong> - React, Streamlit, responsive web design |
+                        <strong>DevOps & Databases</strong> - Docker, Git, PostgreSQL, Supabase, ChromaDB
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>20+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🐍 Python & Core</h3>
+                    <ul>
+                        <li>Python 3.x</li>
+                        <li>Data Structures</li>
+                        <li>OOP Principles</li>
+                        <li>Functional Programming</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🤖 AI & Machine Learning</h3>
+                    <ul>
+                        <li>LangChain/LangGraph</li>
+                        <li>RAG Pipelines</li>
+                        <li>Groq API Integration</li>
+                        <li>NLP & Embeddings</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>📊 Data Science & Analytics</h3>
+                    <ul>
+                        <li>Pandas & NumPy</li>
+                        <li>Data Visualization</li>
+                        <li>Statistical Analysis</li>
+                        <li>Machine Learning Models</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Databases</h3>
+                    <ul>
+                        <li>SQLite</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Supabase</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>⚡ Backend & APIs</h3>
+                    <ul>
+                        <li>FastAPI</li>
+                        <li>Pydantic Validation</li>
+                        <li>RESTful APIs</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🎨 Frontend & Tools</h3>
+                    <ul>
+                        <li>Streamlit</li>
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Tools & DevOps</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>VS Code</li>
+                        <li>Jupyter Notebooks</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🔍 Vector & Search</h3>
+                    <ul>
+                        <li>ChromaDB</li>
+                        <li>SentenceTransformer</li>
+                        <li>Vector Embeddings</li>
+                        <li>Similarity Search</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="project-content">
+                        <h3>🤖 GST ChatBot</h3>
+                        <p>An intelligent Retrieval-Augmented Generation (RAG) powered chatbot for Goods and Services Tax queries. Helps users understand GST regulations using document processing and advanced NLP.</p>
+                        <div class="project-tags">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">Groq API</span>
+                            <span class="tag">ChromaDB</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="project-content">
+                        <h3>📚 RAG Pipeline</h3>
+                        <p>A complete Retrieval-Augmented Generation pipeline with document parsing using PyMuPDF, semantic embeddings via SentenceTransformer, and vector similarity search with ChromaDB.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyMuPDF</span>
+                            <span class="tag">SentenceTransformer</span>
+                            <span class="tag">ChromaDB</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="project-content">
+                        <h3>🔗 LangChain Pipeline</h3>
+                        <p>Enterprise-grade LLM orchestration using LangChain, LangGraph, LangServe, and LangSmith. Builds complex AI workflows with monitoring and deployment capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">LangChain</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">LangServe</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="project-content">
+                        <h3>⚡ FastAPI with Pydantic</h3>
+                        <p>High-performance RESTful API development using FastAPI framework with data validation, type hints, and automatic OpenAPI documentation.</p>
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Pydantic</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="project-content">
+                        <h3>💾 Database & Supabase</h3>
+                        <p>Database design and integration projects using SQLite, PostgreSQL, and Supabase cloud instances for scalable data management.</p>
+                        <div class="project-tags">
+                            <span class="tag">SQLite</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Database Design</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <div class="project-content">
+                        <h3>🔍 TextSQL - NLP to SQL</h3>
+                        <p>Convert natural language queries to SQL with LLM integration. Features user authentication, database connectivity, and intelligent query generation powered by LangChain.</p>
+                        <div class="project-tags">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">LLM Integration</span>
+                            <span class="tag">SQL Generation</span>
+                        </div>
+                        <a href="projects.html" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p>I'm always open to new opportunities and interesting projects. Feel free to reach out!</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:syednoormujassum@gmail.com">syednoormujassum@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+16475705272">+1 (647) 570-5272</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Canada</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/syednoormujassum" class="social-icon" aria-label="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/syed-noor-mujassum-53b501106/" class="social-icon" aria-label="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:syednoormujassum@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Syed Noor Mujassum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

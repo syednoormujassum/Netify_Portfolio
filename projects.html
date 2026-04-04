@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Syed Noor Mujassum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            background-color: #f9fafb;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+        }
+        .project-detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .project-detail h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .project-detail h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .project-detail p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #4b5563;
+        }
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .tech-item {
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#0099ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#6a11cb;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Neural network nodes -->
+                    <circle cx="25" cy="10" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="15" cy="25" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="35" cy="25" r="3" fill="url(#aiGradient)"/>
+                    <circle cx="25" cy="40" r="3" fill="url(#aiGradient)"/>
+                    <!-- Connecting lines (neural network) -->
+                    <line x1="25" y1="13" x2="15" y2="23" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="25" y1="13" x2="35" y2="23" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="15" y1="28" x2="25" y2="37" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <line x1="35" y1="28" x2="25" y2="37" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.8"/>
+                    <!-- Data points -->
+                    <circle cx="10" cy="40" r="1.5" fill="#00d4ff" opacity="0.6"/>
+                    <circle cx="40" cy="40" r="1.5" fill="#00d4ff" opacity="0.6"/>
+                    <circle cx="20" cy="45" r="1" fill="#0099ff" opacity="0.5"/>
+                    <circle cx="30" cy="45" r="1" fill="#0099ff" opacity="0.5"/>
+                </svg>
+                <a href="index.html" style="text-decoration: none; color: var(--primary-color); display: flex; align-items: center;"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; padding: 60px 20px; text-align: center;">
+        <div class="hero-content">
+            <h1 class="hero-title">My Projects</h1>
+            <p class="hero-subtitle">A collection of AI, Data Science, and Full-Stack development projects</p>
+        </div>
+    </section>
+
+    <!-- Projects Details -->
+    <section class="project-detail">
+        <div class="project-detail-content">
+            <h2>🤖 GST ChatBot</h2>
+            <p><strong>A Retrieval-Augmented Generation (RAG) powered intelligent chatbot for Goods and Services Tax queries</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                The GST ChatBot is a sophisticated application designed to help users understand complex Goods and Services Tax (GST) regulations. Dedicated to my beloved father, this project leverages cutting-edge AI technologies to provide accurate, context-aware answers about GST regulations without the need for manual document searching.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>Intelligent document processing and PDF text extraction</li>
+                <li>Smart chunking with overlap for better context retention</li>
+                <li>Semantic search using SentenceTransformer embeddings</li>
+                <li>RAG pipeline for accurate, context-aware responses</li>
+                <li>Clean Streamlit web interface for easy interaction</li>
+                <li>Source attribution showing document references and confidence scores</li>
+                <li>Real-time response generation using Groq API</li>
+                <li>Vector database storage with ChromaDB</li>
+            </ul>
+
+            <h3>🏗️ Architecture</h3>
+            <p>
+                The application follows a modern RAG architecture:
+                PDF Documents → Text Extraction → Chunking → Embeddings → Vector Store → Query Processing → Response Generation
+            </p>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">Streamlit</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Groq API</div>
+                <div class="tech-item">ChromaDB</div>
+                <div class="tech-item">SentenceTransformer</div>
+                <div class="tech-item">PyMuPDF</div>
+                <div class="tech-item">Langchain</div>
+                <div class="tech-item">NumPy/Pandas</div>
+            </div>
+
+            <h3>📊 Core Components</h3>
+            <ul class="feature-list">
+                <li><strong>Data Loader:</strong> Loads and processes PDF documents from GST sources</li>
+                <li><strong>Chunking Manager:</strong> Intelligently splits documents with overlap for context</li>
+                <li><strong>Vector Store:</strong> Manages ChromaDB for efficient vector storage and retrieval</li>
+                <li><strong>RAG Retriever:</strong> Handles query processing and response generation</li>
+                <li><strong>Streamlit App:</strong> User-friendly web interface for interaction</li>
+            </ul>
+
+            <h3>🎯 Use Cases</h3>
+            <ul class="feature-list">
+                <li>Quick lookup of GST regulations and procedures</li>
+                <li>Understanding tax implications for different scenarios</li>
+                <li>Business compliance and filing assistance</li>
+                <li>Educational resource for GST learners</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-detail" style="border-left-color: #f5576c;">
+        <div class="project-detail-content">
+            <h2>📚 RAG Pipeline</h2>
+            <p><strong>A complete Retrieval-Augmented Generation pipeline with advanced document processing and semantic search</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                This project implements a complete RAG (Retrieval-Augmented Generation) pipeline from scratch, demonstrating best practices in document processing, semantic embeddings, and intelligent retrieval. It serves as a foundation for building AI applications that require access to external knowledge bases.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>PDF document parsing using PyMuPDF with text extraction</li>
+                <li>Recursive text splitting for optimal chunk sizing</li>
+                <li>SentenceTransformer-based semantic embeddings</li>
+                <li>ChromaDB for scalable vector storage with unique ID management</li>
+                <li>Cosine similarity-based retrieval using sklearn</li>
+                <li>LLM integration for generating contextual responses</li>
+                <li>Full context preservation with chunking overlap</li>
+            </ul>
+
+            <h3>🔄 Pipeline Flow</h3>
+            <p>
+                Document → PDF Parsing → Text Extraction → Recursive Chunking → Embedding Generation → Vector Storage → Similarity Search → Context Assembly → LLM Processing → Response Generation
+            </p>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">Python</div>
+                <div class="tech-item">PyMuPDF</div>
+                <div class="tech-item">SentenceTransformer</div>
+                <div class="tech-item">ChromaDB</div>
+                <div class="tech-item">Scikit-learn</div>
+                <div class="tech-item">Langchain</div>
+                <div class="tech-item">NumPy</div>
+                <div class="tech-item">ChatGroq</div>
+            </div>
+
+            <h3>📖 Components</h3>
+            <ul class="feature-list">
+                <li><strong>Document Parser:</strong> PyMuPDF for robust PDF text extraction</li>
+                <li><strong>Chunking Strategy:</strong> Recursive text splitter with configurable overlap</li>
+                <li><strong>Embedding Engine:</strong> SentenceTransformer for semantic representation</li>
+                <li><strong>Vector Database:</strong> ChromaDB with UUID management for unique records</li>
+                <li><strong>Retrieval Engine:</strong> Cosine similarity search from sklearn</li>
+                <li><strong>Response Generator:</strong> LLM integration for coherent answers</li>
+            </ul>
+
+            <h3>📊 Performance Metrics</h3>
+            <ul class="feature-list">
+                <li>Fast semantic search with cosine similarity</li>
+                <li>Efficient memory usage with chunked processing</li>
+                <li>Scalable vector storage with ChromaDB</li>
+                <li>Context-aware response generation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-detail" style="border-left-color: #00f2fe;">
+        <div class="project-detail-content">
+            <h2>🔗 LangChain Pipeline</h2>
+            <p><strong>Enterprise-grade LLM orchestration and workflow management using the LangChain ecosystem</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                This project demonstrates the complete LangChain ecosystem including LangChain for orchestration, LangGraph for workflow visualization, LangServe for deployment, and LangSmith for monitoring. It shows how to build production-ready AI applications with proper monitoring and maintenance capabilities.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>LangChain framework for LLM orchestration</li>
+                <li>LangGraph for complex workflow management and visualization</li>
+                <li>LangServe for easy REST API deployment</li>
+                <li>LangSmith for production monitoring and debugging</li>
+                <li>Chain composition and agent patterns</li>
+                <li>Memory management for context preservation</li>
+                <li>Tool integration and function calling</li>
+            </ul>
+
+            <h3>🏗️ Architecture</h3>
+            <p>
+                LLM Chains → Agents → Tools → LangGraph Workflows → LangServe Deployment → LangSmith Monitoring
+            </p>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">LangChain</div>
+                <div class="tech-item">LangGraph</div>
+                <div class="tech-item">LangServe</div>
+                <div class="tech-item">LangSmith</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">FastAPI</div>
+                <div class="tech-item">OpenAI/Groq</div>
+                <div class="tech-item">YAML Config</div>
+            </div>
+
+            <h3>🎯 Components</h3>
+            <ul class="feature-list">
+                <li><strong>LLM Chains:</strong> Sequential composition of language models and prompts</li>
+                <li><strong>Agents:</strong> Self-reasoning systems with tool access</li>
+                <li><strong>Tools:</strong> Integrations with external APIs and functions</li>
+                <li><strong>LangGraph:</strong> Complex workflow orchestration with state management</li>
+                <li><strong>LangServe:</strong> Automatic REST API generation from LangChain objects</li>
+                <li><strong>LangSmith:</strong> Observability and debugging in production</li>
+            </ul>
+
+            <h3>💡 Use Cases</h3>
+            <ul class="feature-list">
+                <li>Building chatbots with memory and reasoning</li>
+                <li>Autonomous agents for task completion</li>
+                <li>Complex document analysis workflows</li>
+                <li>Multi-step reasoning and planning</li>
+                <li>Production AI application deployment</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-detail" style="border-left-color: #38f9d7;">
+        <div class="project-detail-content">
+            <h2>⚡ FastAPI with Pydantic</h2>
+            <p><strong>High-performance RESTful API development with modern Python best practices</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                This project showcases best practices for building scalable, production-ready REST APIs using FastAPI and Pydantic. It demonstrates data validation, type hints, automatic documentation, and API design patterns.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>FastAPI for ultra-fast API development</li>
+                <li>Pydantic for data validation and serialization</li>
+                <li>Type hints for better code clarity</li>
+                <li>Automatic OpenAPI documentation (Swagger UI)</li>
+                <li>Request/response validation</li>
+                <li>Dependency injection system</li>
+                <li>Database integration patterns</li>
+                <li>Error handling and custom exceptions</li>
+            </ul>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">FastAPI</div>
+                <div class="tech-item">Pydantic</div>
+                <div class="tech-item">Python 3.8+</div>
+                <div class="tech-item">Uvicorn</div>
+                <div class="tech-item">SQLAlchemy</div>
+                <div class="tech-item">JWT Auth</div>
+                <div class="tech-item">CORS</div>
+                <div class="tech-item">PostgreSQL</div>
+            </div>
+
+            <h3>📊 Components</h3>
+            <ul class="feature-list">
+                <li><strong>Route Handlers:</strong> Clean endpoint definitions with automatic validation</li>
+                <li><strong>Data Models:</strong> Pydantic schemas for request/response</li>
+                <li><strong>Database Layer:</strong> SQLAlchemy ORM integration</li>
+                <li><strong>Authentication:</strong> JWT token-based authentication</li>
+                <li><strong>Middleware:</strong> CORS, logging, and error handling</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-detail" style="border-left-color: #fee140;">
+        <div class="project-detail-content">
+            <h2>💾 Database & Supabase</h2>
+            <p><strong>Database design and integration with modern cloud solutions</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                This project explores database design principles and implementations across multiple platforms including SQLite for local development, PostgreSQL for robust systems, and Supabase for cloud-native applications.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>SQLite for lightweight local databases</li>
+                <li>PostgreSQL for robust, scalable systems</li>
+                <li>Supabase cloud instances with instant APIs</li>
+                <li>Database schema design and migrations</li>
+                <li>Query optimization techniques</li>
+                <li>Real-time capabilities with Supabase</li>
+                <li>Authentication integration</li>
+                <li>Backup and disaster recovery</li>
+            </ul>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">SQLite</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Supabase</div>
+                <div class="tech-item">SQL</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Alembic</div>
+                <div class="tech-item">psycopg2</div>
+                <div class="tech-item">ORM Tools</div>
+            </div>
+
+            <h3>📋 Coverage</h3>
+            <ul class="feature-list">
+                <li><strong>SQLite:</strong> Local development databases, logging systems</li>
+                <li><strong>PostgreSQL:</strong> Production-grade relational databases</li>
+                <li><strong>Supabase:</strong> Serverless PostgreSQL with instant REST APIs</li>
+                <li><strong>Schema Design:</strong> Normalization and indexing strategies</li>
+                <li><strong>Data Integrity:</strong> Constraints and relationships</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-detail" style="border-left-color: #fed6e3;">
+        <div class="project-detail-content">
+            <h2>🔍 TextSQL - NLP to SQL Converter</h2>
+            <p><strong>Convert natural language queries to SQL with intelligent LLM-powered query generation</strong></p>
+            
+            <h3>📝 Project Overview</h3>
+            <p>
+                TextSQL is an advanced application that bridges the gap between natural language and SQL databases. It leverages LangChain and LLM integration to understand user queries in plain English and automatically generate optimized SQL queries, making database interactions accessible to non-technical users.
+            </p>
+
+            <h3>✨ Key Features</h3>
+            <ul class="feature-list">
+                <li>Natural Language to SQL conversion powered by LLMs</li>
+                <li>User authentication and registration system</li>
+                <li>Multi-database connectivity support (MySQL, PostgreSQL, SQL Server)</li>
+                <li>Query validation and error handling</li>
+                <li>Interactive Streamlit web interface</li>
+                <li>LangChain integration for prompt optimization</li>
+                <li>Real-time query results display</li>
+                <li>Comprehensive logging and monitoring</li>
+            </ul>
+
+            <h3>🏗️ Architecture</h3>
+            <p>
+                User Input → LLM Processing → SQL Generation → Database Execution → Results Display
+            </p>
+
+            <h3>🛠️ Technology Stack</h3>
+            <div class="tech-stack">
+                <div class="tech-item">Streamlit</div>
+                <div class="tech-item">LangChain</div>
+                <div class="tech-item">Anthropic API</div>
+                <div class="tech-item">FastAPI</div>
+                <div class="tech-item">PyODBC</div>
+                <div class="tech-item">Chainlit</div>
+                <div class="tech-item">MySQL/PostgreSQL</div>
+                <div class="tech-item">Python</div>
+            </div>
+
+            <h3>🎯 Core Components</h3>
+            <ul class="feature-list">
+                <li><strong>Authentication Module:</strong> Secure user sign up and login system</li>
+                <li><strong>SQL Generator:</strong> LLM-powered conversion from natural language to SQL</li>
+                <li><strong>Database Connection:</strong> Support for multiple database systems with pyodbc</li>
+                <li><strong>Query Executor:</strong> Safe and validated SQL query execution</li>
+                <li><strong>Results Parser:</strong> Convert database results to user-friendly format</li>
+                <li><strong>Logging System:</strong> Comprehensive logging for debugging and monitoring</li>
+            </ul>
+
+            <h3>💡 Use Cases</h3>
+            <ul class="feature-list">
+                <li>Business intelligence for non-technical users</li>
+                <li>Quick data exploration without SQL knowledge</li>
+                <li>Automated report generation</li>
+                <li>Data analysis and querying</li>
+                <li>Interactive dashboard builder</li>
+            </ul>
+
+            <h3>🔒 Security Features</h3>
+            <ul class="feature-list">
+                <li>User authentication with session management</li>
+                <li>SQL injection prevention</li>
+                <li>Query validation before execution</li>
+                <li>Secure database credentials handling</li>
+                <li>Audit logging of all queries</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Syed Noor Mujassum. All rights reserved. | <a href="index.html" style="color: inherit;">Back to Portfolio</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
