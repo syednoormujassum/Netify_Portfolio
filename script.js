@@ -140,3 +140,120 @@ document.addEventListener('keydown', (e) => {
 // Log portfolio initialization
 console.log('Portfolio loaded successfully!');
 console.log('Welcome to Syed Noor Mujassum\'s Portfolio');
+// Reviews Section - Form Handling
+const reviewForm = document.getElementById('reviewForm');
+const reviewsList = document.getElementById('reviewsList');
+
+// Load reviews from localStorage on page load
+function loadReviews() {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    displayReviews(reviews);
+}
+
+// Display reviews
+function displayReviews(reviews) {
+    reviewsList.innerHTML = '';
+    
+    if (reviews.length === 0) {
+        reviewsList.innerHTML = '<div class="empty-reviews-message">No reviews yet. Be the first to share your feedback!</div>';
+        return;
+    }
+
+    // Sort reviews by date (newest first)
+    reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    reviews.forEach((review, index) => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.style.opacity = '0';
+        reviewCard.style.transform = 'translateY(20px)';
+        reviewCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        
+        const ratingStars = '⭐'.repeat(parseInt(review.rating));
+        const projectText = review.project ? ` - ${review.project}` : '';
+        
+        reviewCard.innerHTML = `
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>${review.name}</h4>
+                    <div class="reviewer-project">${new Date(review.date).toLocaleDateString()}${projectText}</div>
+                </div>
+                <div class="review-rating">${ratingStars}</div>
+            </div>
+            <div class="review-text">"${review.message}"</div>
+        `;
+        
+        reviewsList.appendChild(reviewCard);
+        
+        // Trigger animation
+        setTimeout(() => {
+            reviewCard.style.opacity = '1';
+            reviewCard.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
+}
+
+// Handle form submission
+if (reviewForm) {
+    reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('reviewName').value.trim();
+        const email = document.getElementById('reviewEmail').value.trim();
+        const rating = document.getElementById('reviewRating').value;
+        const project = document.getElementById('reviewProject').value.trim();
+        const message = document.getElementById('reviewMessage').value.trim();
+
+        // Validation
+        if (!name || !email || !rating || !message) {
+            alert('Please fill in all required fields');
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        // Create review object
+        const review = {
+            name,
+            email,
+            rating,
+            project,
+            message,
+            date: new Date().toISOString()
+        };
+
+        // Get existing reviews
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+        // Add new review
+        reviews.push(review);
+
+        // Save to localStorage
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+
+        // Show success message
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message';
+        successMessage.textContent = '✓ Thank you! Your review has been submitted successfully.';
+        reviewForm.insertAdjacentElement('beforebegin', successMessage);
+
+        // Remove success message after 3 seconds
+        setTimeout(() => {
+            successMessage.remove();
+        }, 3000);
+
+        // Reset form
+        reviewForm.reset();
+
+        // Reload reviews
+        loadReviews();
+    });
+}
+
+// Load reviews on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadReviews();
+});
