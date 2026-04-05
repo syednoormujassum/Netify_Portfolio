@@ -257,3 +257,14 @@ if (reviewForm) {
 document.addEventListener('DOMContentLoaded', () => {
     loadReviews();
 });
+
+
+/*
+function resetReviews() {
+    if (confirm("Are you sure you want to delete all reviews?")) {
+        localStorage.removeItem("reviews");
+        loadReviews(); // refresh UI
+    }
+}
+    */
+   
